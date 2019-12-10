@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900&display=swap');
+
+:root {
+  --red-color: #ff003c;
+  --black-color: #070707;
+  --white-color: #ffffff;
+  --font-family: 'Barlow', sans-serif;
+}
+body {
+  background-color: var(--black-color);
+  font-family: var(--font-family);
+}
+.image-slider .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+.image-slider .swiper-slide .wrapper {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.image-slider .swiper-slide .img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-slider .swiper-slide .sub-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-weight: 900;
+  margin-bottom: -30px;
+}
+.image-slider .swiper-slide .title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+.image-slider .swiper-slide .description {
+  color: var(--white-color);
+  font-size: 1rem;
+  text-align: justify;
+}
+.image-slider .controls {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.image-slider .ctrl {
+  height: 60px;
+  width: 60px;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+  border-radius: 500px;
+  background-image: none;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+  transition: all ease 0.1s;
+}
+.image-slider .ctrl:hover {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.image-slider .ctrl.next-ctrl {
+  margin-left: 20px;
+}
+
+.image-slider .text-wrapper {
+  overflow: hidden;
+  display: inline-flex;
+}
+.image-slider .text-wrapper .text-inner {
+  transform: translateY(100%);
+  transition: all ease 0.5s;
+}
+/*active states*/
+.image-slider .swiper-slide-active.active .text-inner {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/*delays*/
+.image-slider .swiper-slide.active .sub-title .text-inner {
+  transition-delay: 0.05s;
+}
+
+.image-slider .swiper-slide.active .title .text-inner {
+  transition-delay: 0.1s;
+}
+
+.image-slider .swiper-slide.active .description .text-inner {
+  transition-delay: 0.15s;
+}
+
+/*credits*/
+.credits {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #ffffff;
+  a {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
